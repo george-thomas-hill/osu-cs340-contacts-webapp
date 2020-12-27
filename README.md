@@ -1,7 +1,7 @@
 
 # osu-cs340-contacts-webapp
 
-* _Screenshot and link to screencast._
+[![A screenshot of this program.](https://raw.githubusercontent.com/george-thomas-hill/osu-cs340-contacts-webapp/main/cs340-contacts-webapp-screenshot.png "Click to see screencast.")](http://georgethomashill.com/gh/osu/cs340/cs340-contacts-webapp-screencast.mp4)
 
 CS 340 was Oregon State University's Introduction to Databases course.
 
