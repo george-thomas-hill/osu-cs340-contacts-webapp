@@ -43,7 +43,7 @@ Then edit `dbcon.js` to match your database and port configuration.
 Then:
 
 ```
-./node_modules/forever/bin/forever start main.js 11758
+./node_modules/forever/bin/forever start main.js <PORT-NUMBER-GOES-HERE>
 ```
 
 You can then access the contacts webapp by going to:
