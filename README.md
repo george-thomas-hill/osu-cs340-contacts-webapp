@@ -10,7 +10,7 @@ We chose to make a contacts app that would track contact information and records
 
 Please see [Assignment Step 1.pdf](https://github.com/george-thomas-hill/osu-cs340-contacts-webapp/blob/main/Assignment%20Step%201.pdf) and [Assignment Step 7.pdf](https://github.com/george-thomas-hill/osu-cs340-contacts-webapp/blob/main/Assignment%20Step%207.pdf) for details.
 
-Please see our [Report.pdf](https://github.com/george-thomas-hill/osu-cs340-contacts-webapp/blob/main/Report.pdf) for the database's Entity-Relationship Diagram and schema.
+Please see our [Report.pdf](https://github.com/george-thomas-hill/osu-cs340-contacts-webapp/blob/main/Report.pdf) for the database's Entity Relationship Diagram and schema.
 
 System requirements: a web server, `mysql`, Node.js, and `npm`.
 
