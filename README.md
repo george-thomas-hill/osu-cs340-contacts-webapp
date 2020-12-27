@@ -1,13 +1,12 @@
-
 # osu-cs340-contacts-webapp
 
 [![A screenshot of this program.](https://raw.githubusercontent.com/george-thomas-hill/osu-cs340-contacts-webapp/main/cs340-contacts-webapp-screenshot.png "Click to see screencast.")](http://georgethomashill.com/gh/osu/cs340/cs340-contacts-webapp-screencast.mp4)
 
 CS 340 was Oregon State University's Introduction to Databases course.
 
-The assignment was . . .
+I worked all term with a partner to make a database-driven website that would solve a problem and meet various criteria.
 
-Please see [Assignment.pdf] . . .
+Please see [Assignment Step 1.pdf](https://github.com/george-thomas-hill/osu-cs340-contacts-webapp/blob/main/Assignment%20Step%201.pdf) and [Assignment Step 7.pdf](https://github.com/george-thomas-hill/osu-cs340-contacts-webapp/blob/main/Assignment%20Step%207.pdf) for details.
 
 System requirements: a web server, `mysql`, Node.js, and `npm`.
 
@@ -51,3 +50,5 @@ You can then access the contacts webapp by going to:
 ```
 http://<SERVER-NAME-GOES-HERE>:<PORT-NUMBER-GOES-HERE>
 ```
+
+A screencast of the working website can be viewed [here](http://georgethomashill.com/gh/osu/cs340/cs340-contacts-webapp-screencast.mp4).
