@@ -4,9 +4,13 @@
 
 CS 340 was Oregon State University's Introduction to Databases course.
 
-I worked all term with a partner to make a database-driven website that would solve a problem and meet various criteria.
+I worked all term with a partner to make a database-driven website that would solve a problem and meet various criteria (e.g. have at least four tables, at least four relationships, and at least one many-to-many relationship).
+
+We chose to make a contacts app that would track contact information and records of interactions with those contacts.
 
 Please see [Assignment Step 1.pdf](https://github.com/george-thomas-hill/osu-cs340-contacts-webapp/blob/main/Assignment%20Step%201.pdf) and [Assignment Step 7.pdf](https://github.com/george-thomas-hill/osu-cs340-contacts-webapp/blob/main/Assignment%20Step%207.pdf) for details.
+
+Please see our [Report.pdf](https://github.com/george-thomas-hill/osu-cs340-contacts-webapp/blob/main/Report.pdf) for the database's Entity-Relationship Diagram and schema.
 
 System requirements: a web server, `mysql`, Node.js, and `npm`.
 
