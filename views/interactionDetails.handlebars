@@ -1,0 +1,77 @@
+<div class="menu">
+    <ul>
+        <li><a href="/home">Log Out</a></li>
+        <li><a href="/modes/{{currentUserId}}">Modes</a></li>
+        <li><a href="/contacts/{{currentUserId}}/~/~">Contacts</a></li>
+        <li><a href="/myAccount/{{currentUserId}}">My Account</a></li>
+        <li class="user">
+            <div>Hi, {{user.firstName}} {{user.lastName}}</div>
+        </li>
+    </ul>
+</div>
+
+<img id="logo" src="/static/logo.png" class="logoSmall">
+<!-- Source: https://www.flaticon.com/free-icon/contacts_969312 -->
+
+<!-- READ and DELETE Interaction Details -->
+
+<div class="center">
+    <h1>Details of your interactions with <br> {{contact.firstName}} {{contact.lastName}} on {{interaction.startDate}}</h1>
+    <h3>The details.</h3>
+    {{#if noResults}}
+    <h4>You haven't entered any details for this interaction!</h4>
+    {{else}}
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Time &nbsp; &nbsp; &nbsp;</th>
+            <th>Mode</th>
+            <th>Details</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each details}}
+        <tr>
+            <td>{{startTime}}</td>
+            <td>{{type}}</td>
+            <td>{{details}}</td>
+            <td><button class="tableButton" onclick="deleteDetails({{detailsId}})">Delete</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/if}}
+<br>
+
+<!-- CREATE Interaction Details -->
+
+<div class=center>
+    <h3>Add interaction details.</h3>
+</div>
+
+<form action="/interactionDetails/{{currentUserId}}/{{currentCid}}/{{currentIid}}" method="post">
+    <fieldset>
+        <div class="spacerSmall"></div>
+        <label>Time: </label>
+        <input type="time" class="formControlAlt" name="time" id="time">
+        <br>
+        <div class="spacerSmall"></div>
+        <label>Mode: </label>
+        <select id="modes" class="formControlAlt" name="modes">
+            {{#each modes}}
+                <option value="{{comId}}">{{type}}</option>
+            {{/each}}
+        </select>
+        <div class="spacerSmall"></div>
+        <textarea class="formControlAlt" placeholder="Details" name="details" id="details" maxlength="255"></textarea>
+        <input type="submit" value="Add" class="formButton" id="detailsSubmit">
+    </fieldset>
+</form>
+<br>
+
+<div class="center">
+    <button onclick="location.href='/interactions/{{currentUserId}}/{{currentCid}}'" class="navButton">&laquo; Return to all interactions with {{contact.firstName}} {{contact.lastName}}</button>
+</div>

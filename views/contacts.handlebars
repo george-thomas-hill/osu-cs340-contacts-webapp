@@ -1,0 +1,94 @@
+<div class="menu">
+    <ul>
+        <li><a href="/home">Log Out</a></li>
+        <li><a href="/modes/{{currentUserId}}">Modes</a></li>
+        <li><a href="/contacts/{{currentUserId}}/~/~">Contacts</a></li>
+        <li><a href="/myAccount/{{currentUserId}}">My Account</a></li>
+        <li class="user">
+            <div>Hi, {{user.firstName}} {{user.lastName}}</div>
+        </li>
+    </ul>
+</div>
+
+<img id="logo" src="/static/logo.png" class="logoSmall">
+<!-- Source: https://www.flaticon.com/free-icon/contacts_969312 ––>
+
+<!-- SEARCH Contacts -->
+
+<div class="center">
+    <h1>Contacts</h1>
+    <h3>Search by first name, last name, or both.</h3>
+</div>
+
+<fieldset>
+    <input type="text" class="formControl" placeholder="First Name" id="searchFirstName" maxlength="50">
+    <input type="text" class="formControl" placeholder="Last Name" id="searchLastName" maxlength="50">
+    <button onclick="search()" class="formButton">Search</button>
+</fieldset>
+<br>
+
+<!-- READ Contacts -->
+
+<div class="center">
+    <h3>Here are your contacts.</h3>
+    {{#if noResults}}
+    <h4>You don't have any contacts yet. Add one!</h4>
+    {{else}}
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+            <th>Email</th>
+            <th>Notes &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+            <th>Emergency Contact</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each contacts}}
+        <tr>
+            <td>{{firstName}}</td>
+            <td>{{lastName}}</td>
+            <td>{{phone}}</td>
+            <td>{{email}}</td>
+            <td>{{notes}}</td>
+            <td>{{ECfirstName}} {{EClastName}}</td>
+            <td><button onclick="location.href='/interactions/{{../currentUserId}}/{{contactId}}'" class="tableButton">Interactions</button></td>
+            <td><button onclick="location.href='/editContact/{{../currentUserId}}/{{contactId}}'" class="tableButton">Edit</button></td>
+            <td><button class="tableButton" onclick="deleteContact({{../currentUserId}}, {{contactId}})">Delete</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/if}}
+<br>
+
+<!-- CREATE Contacts -->
+
+<div class=center>
+    <h3>Add a new contact.</h3>
+</div>
+
+<form action="/contacts/{{currentUserId}}" method="post">
+    <fieldset>
+        <input type="text" class="formControl" name="firstName" placeholder="First Name" id="firstName" maxlength="50">
+        <input type="text" class="formControl" name="lastName" placeholder="Last Name" id="lastName" maxlength="50">
+        <input type="text" class="formControl" name="phone" placeholder="Phone" id="phone" maxlength="50">
+        <input type="text" class="formControl" name="email" placeholder="Email" id="email" maxlength="254">
+        <textarea class="formControl" name="notes" placeholder="Notes" id="notes" maxlength="255"></textarea>
+        <label>Emergency Contact:</label>
+        <select name="emergencyContactId" class="formControlAlt">
+            <option value="NULL">- None -</option>
+            {{#each contacts}}
+            <option value="{{contactId}}">{{firstName}} {{lastName}}</option>
+            {{/each}}
+        </select>
+        <input type="submit" value="Add" class="formButton" id="contactSubmit">
+    </fieldset>
+</form>

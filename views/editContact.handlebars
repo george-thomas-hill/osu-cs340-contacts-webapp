@@ -1,0 +1,51 @@
+<div class="menu">
+    <ul>
+        <li><a href="/home">Log Out</a></li>
+        <li><a href="/modes/{{currentUserId}}">Modes</a></li>
+        <li><a href="/contacts/{{currentUserId}}/~/~">Contacts</a></li>
+        <li><a href="/myAccount/{{currentUserId}}">My Account</a></li>
+        <li class="user">
+            <div>Hi, {{user.firstName}} {{user.lastName}}</div>
+        </li>
+    </ul>
+</div>
+
+<img id="logo" src="/static/logo.png" class="logo">
+<!-- Source: https://www.flaticon.com/free-icon/contacts_969312 -->
+
+<!-- UPDATE Contact -->
+
+<div class="center">
+    <h1>Edit a Contact</h1>
+</div>
+
+<form id="update-contact" method="post">
+    <fieldset>
+        <div class="spacerSmall"></div>
+        <label>First Name: </label>
+        <input type="text" class="formControlAlt" name="firstName" value="{{contact.firstName}}" id="firstName" maxlength="50">
+        <div class="spacerSmall"></div>
+        <label>Last Name: </label>
+        <input type="text" class="formControlAlt" name="lastName" value="{{contact.lastName}}" id="lastName" maxlength="50">
+        <div class="spacerSmall"></div>
+        <label>Phone: </label>
+        <input type="text" class="formControlAlt" name="phone" value="{{contact.phone}}" id="phone" maxlength="50">
+        <div class="spacerSmall"></div>
+        <label>Email: </label>
+        <input type="text" class="formControlAlt" name="email" value="{{contact.email}}" id="email" maxlength="50">
+        <div class="spacerSmall"></div>
+        <label>Notes: </label>
+        <textarea class="formControlAlt" name="notes" id="notes">{{contact.notes}}</textarea>
+        <div class="spacerSmall"></div>
+        <label>Emergency Contact:</label>
+        <select name="emergencyContactId" class="formControlAlt" id="emergency-contact-selector">
+            <option value="NULL">- None -</option>
+            {{#each contacts}}
+            <option value="{{contactId}}">{{firstName}} {{lastName}}</option>
+            {{/each}}
+        </select>
+        <button onclick="updateContact({{currentUserId}}, {{contact.contactId}})" class="formButton">Update</button>
+        <br><br>
+    </fieldset>
+</form>
+<script defer>selectEmergencyContact({{contact.ECcontactId}});</script>

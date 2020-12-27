@@ -1,0 +1,244 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+  margin: auto;
+  width: 100%;
+  min-height: 100vh;
+  background: #f0f0f0;
+}
+
+h1 {
+  font-size: 48px;
+  color: #fa5d0f;
+}
+
+h3 {
+  color: #4b5568;
+}
+
+h4 {
+  color: #fa5d0f;
+}
+
+/* Sizing and centering logo on login page */
+.logo {
+  display: block;
+  padding-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px; 
+  max-height: 300px;
+}
+
+/* Sizing and centering logo on all other pages */
+.logoSmall {
+  display: block;
+  padding-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100px; 
+  max-height: 100px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* White-space between form inputs and form labels */
+.spacerSmall {
+  margin-top: 20px
+}
+
+/* White-space above footer when needed */
+.spacerBig {
+  margin-top: 280px
+}
+
+/* Centering, styling, and spacing for footer where dev information and credits go */
+.footer {
+  font-size: 14px;
+  color: #4b5568;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+/* Creating the rounded, borderless look for tables */
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  border-radius: 20px;
+  margin: auto;
+  width: 30%;
+  background: white;
+  overflow: hidden;
+}
+
+table td, table th {
+  padding: 0px 15px 0px;
+  text-align: left;
+}
+
+table thead th {
+  font-weight: normal;
+  height: 60px;
+  background: #4b5568;
+  color: white;
+  white-space: nowrap;
+}
+
+table tbody tr {
+  height: 50px;
+  color: #5f6c75;
+}
+
+/* Shading every other table row for readability*/
+tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* Changing the color of the row that is moused over */
+tbody tr:hover {
+  background-color: #c8beb9;
+}
+
+/* Styling for buttons inside tables */
+.tableButton {
+  font-family: inherit;
+  border-radius: 20px;
+  padding: 4px 10px;
+  background: #3de000;
+  border: 2px solid #3de000;
+  color: white;
+  float: right;
+}
+
+/* Changing the color of the table button that is moused over */
+.tableButton:hover {
+  background: #00cc00;
+  border-color: #00cc00;
+  color: black;
+}
+
+/* Creating the square, borderless look for forms */
+fieldset {
+  border-color: transparent;
+  border-radius: 20px;
+  margin: auto;
+  width: 28%;
+  background: white;
+}
+
+/* Styling for form inputs that don't have labels */
+.formControl {
+  font-family: inherit;
+  font-size: 16px;
+  color: #5f6c75;
+  width: 95%;
+  margin: 20px 10px 10px 10px;
+  background: transparent;
+  border: 2px solid #e8e8e8;
+  height: 30px;
+}
+
+/* Changing the color of the form inputs when active */
+.formControl:active, .formControl:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #fa5d0f;
+}
+
+/* Styling for form inputs that have labels */
+.formControlAlt {
+  font-family: inherit;
+  font-size: 16px;
+  color: #5f6c75;
+  width: 95%;
+  margin: 0px 10px 10px 10px;
+  background: transparent;
+  border: 2px solid #e8e8e8;
+  height: 30px;
+}
+
+/* Changing the color of the form inputs when active */
+.formControlAlt:active, .formControlAlt:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #fa5d0f;
+}
+
+/* Styling for form input labels */
+label {
+  color: #5f6c75;
+  margin: 0px 0px 0px 10px;
+}
+
+/* Styling for buttons inside forms */
+.formButton {
+  font-family: inherit;
+  font-size: 16px;
+  margin: 20px 10px 20px 10px;
+  padding: 8px 20px;
+  background: #fa5d0f;
+  border: 2px solid #fa5d0f;
+  color: white;
+}
+
+/* Changing the color of the form button that is moused over */
+.formButton:hover {
+  background: #d84c0f;
+  border-color: #d84c0f;
+  color: black;
+}
+
+/* Styling for buttons at the bottom of the page used for easier navigation */
+.navButton {
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 20px;
+  margin: 20px 10px 20px 10px;
+  padding: 8px 20px;
+  background: #4b5568;
+  border: 2px solid #4b5568;
+  color: white;
+}
+
+/* Changing the color of the nav button that is moused over */
+.navButton:hover {
+  background: #d2d2d7;
+  border-color: #d2d2d7;
+  color: black;
+}
+
+/* Stying for the menu bar at the top of the page */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+/* Align the menu links to the right side */
+li {
+  float: right;
+}
+
+/* Align the user's name to the left side */
+li.user {
+  float: left;
+}
+
+/* Styling and spacing for the menu items */
+li a, li div {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Changing the color of the menu item that is moused over */
+li a:hover {
+  background-color: #00cc00;
+}

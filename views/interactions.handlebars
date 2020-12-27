@@ -1,0 +1,64 @@
+<div class="menu">
+    <ul>
+        <li><a href="/home">Log Out</a></li>
+        <li><a href="/modes/{{currentUserId}}">Modes</a></li>
+        <li><a href="/contacts/{{currentUserId}}/~/~">Contacts</a></li>
+        <li><a href="/myAccount/{{currentUserId}}">My Account</a></li>
+        <li class="user">
+            <div>Hi, {{user.firstName}} {{user.lastName}}</div>
+        </li>
+    </ul>
+</div>
+
+<img id="logo" src="/static/logo.png" class="logoSmall">
+<!-- Source: https://www.flaticon.com/free-icon/contacts_969312 -->
+
+<!-- READ and DELETE Interactions -->
+
+<div class="center">
+    <h1>Interactions with <br> {{contact.firstName}} {{contact.lastName}}</h1>
+    <h3>All of your recorded interactions.</h3>
+    {{#if noResults}}
+    <h4>You haven't had any interactions with this contact. <br> Reach out!</h4>
+    {{else}}
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each interactions}}
+        <tr>
+            <td>{{startDate}}</td>
+            <td><button onclick="location.href='/interactionDetails/{{../currentUserId}}/{{../currentCid}}/{{interactId}}'" class="tableButton">View Details</button></td>
+            <td><button onclick="deleteInteraction({{interactId}})" class="tableButton">Delete</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/if}}
+<br>
+
+<!-- CREATE Interactions -->
+
+<div class="center">
+    <h3>Add a new interaction.</h3>
+</div>
+
+<form action="/interactions/{{currentUserId}}/{{currentCid}}" method="post">
+    <fieldset>
+        <div class="spacerSmall"></div>
+        <input type="date" class="formControl" name="date" id="date">
+        <input type="submit" value="Add" class="formButton" id="interactSubmit">
+    </fieldset>
+</form>
+<br>
+
+<div class="center">
+    <button onclick="location.href='/contacts/{{currentUserId}}/~/~'" class="navButton">&laquo; Return to Contacts</button>
+</div>

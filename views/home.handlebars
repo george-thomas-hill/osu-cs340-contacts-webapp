@@ -1,0 +1,44 @@
+<img id="logo" src="/static/logo.png" class="logo">
+<!-- Source: https://www.flaticon.com/free-icon/contacts_969312 -->
+
+<!-- READ Users -->
+
+<div class="center">
+    <h1>Contacts Webapp</h1>
+    <h3>Welcome back. <br> Select your account to continue.</h3>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{firstName}}</td>
+            <td>{{lastName}}</td>
+            <td><button onclick="location.href='/myAccount/{{userId}}'" class="tableButton">Log In</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<br>
+
+<!-- CREATE Users -->
+
+<div class="center">
+    <h3>New? <br> Create an account.</h3>
+</div>
+<form action="/home" method="post">
+    <fieldset>
+        <input type="text" class="formControl" placeholder="First Name" id="firstName" name="firstName" maxlength="50">
+        <input type="text" class="formControl" placeholder="Last Name" id="lastName" name="lastName" maxlength="50">
+        <input type="text" class="formControl" placeholder="Phone" id="phone" name="phone" maxlength="50">
+        <input type="text" class="formControl" placeholder="Email" id="email" name="email" maxlength="254">
+        <input type="submit" value="Register" class="formButton" id="accountSubmit">
+    </fieldset>
+</form>
