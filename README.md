@@ -4,7 +4,7 @@
 
 CS 340 was Oregon State University's Introduction to Databases course.
 
-I worked all term with a partner to make a database-driven website that would solve a problem and meet various criteria (e.g. have at least four tables, at least four relationships, and at least one many-to-many relationship).
+I worked all term with a partner ([Jacky Tran](https://github.com/jtran8)) to make a database-driven website that would solve a problem and meet various criteria (e.g. have at least four tables, at least four relationships, and at least one many-to-many relationship).
 
 We chose to make a contacts app that would track contact information and records of interactions with those contacts.
 
